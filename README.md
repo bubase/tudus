@@ -1,7 +1,7 @@
 # Тудус! (todos)
 Простое приложение для списка дел.
 
-**Стек:** Vue 2.6, Vuex, Vue CLI.
+**Стек:** Vue 2.6, Vuex, Vue CLI, Element UI.
 
 Попробовать: https://bubase.github.io/tudus
 
