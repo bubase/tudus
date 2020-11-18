@@ -3,6 +3,8 @@
 
 **Стек:** Vue 2.6, Vuex, Vue CLI.
 
+Попробовать: https://bubase.github.io/tudus
+
 ## Project setup
 ```
 npm install
