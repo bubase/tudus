@@ -1,4 +1,9 @@
-# tudus
+# Тудус! (todos)
+Простое приложение для списка дел.
+
+**Стек:** Vue 2.6, Vuex, Vue CLI, Element UI.
+
+Попробовать: https://bubase.github.io/tudus
 
 ## Project setup
 ```
@@ -19,6 +24,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
