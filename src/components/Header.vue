@@ -1,25 +1,55 @@
 <template>
   <el-header
-    height="auto">
-    <h1>тудус!</h1>
+    class="header">
+    <a 
+      class="header__link"
+      v-for="link in links"
+      :key="link.id"
+      :href="link.href">
+      <img 
+        class="header__link-img"
+        :src="link.logoSrc" 
+        :alt="link.name">
+    </a>
   </el-header>
 </template>
 
 <script>
 export default {
-
+  computed: {
+    links() {
+      return this.$store.state.headerLinks.links;
+    }
+  }
 }
 </script>
 
-<style scoped>
-  h1 {
-    margin: 0px 0px 2vw 0px;
-    font-family: 'Poiret One', Arial, Helvetica, sans-serif;
-    font-size: calc(42px + 5vw);
-  }
+<style lang='scss' scoped>
 
-  .el-header {
+  .header {
+    display: flex;
+    align-items: center;
     width: 100%;
     text-align: center;
+  }
+
+  .header__link {
+    transition: opacity .2s ease-in;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    opacity: 0.7;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .header__link-img {
+    width: 100%;
+    height: 100%;
   }
 </style>
