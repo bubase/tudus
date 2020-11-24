@@ -10,4 +10,7 @@ Vue.use(ElementUI);
 new Vue({
   store,
   render: h => h(App),
+  beforeCreate() {
+    store.commit('initialiseStore');
+  }
 }).$mount('#app')

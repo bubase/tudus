@@ -1,4 +1,4 @@
-export default {
+const todosModule = {
   state: () => ({
     todos: []
   }),
@@ -16,6 +16,9 @@ export default {
     },
     toggleCompleted(state, payload) {
       state.todos[payload.index].isCompleted = !(state.todos[payload.index].isCompleted)
+    },
+    loadTodos(state, payload) {
+      state.todos = payload.todos;
     }
   },
   actions: {
@@ -30,3 +33,11 @@ export default {
     }
   }
 }
+const todosPlugin = store => {
+  store.subscribe((mutation, state) => {
+    localStorage.setItem('todos', JSON.stringify(state.todos.todos));
+  });
+};
+
+export {todosModule, todosPlugin};
+
