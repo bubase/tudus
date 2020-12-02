@@ -29,14 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 
-  .todos {
-    // border: 1px solid #eee;
-
-    & ul {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
+  .todos ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
 </style>

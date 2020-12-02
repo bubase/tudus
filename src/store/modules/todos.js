@@ -19,6 +19,12 @@ const todosModule = {
     },
     loadTodos(state, payload) {
       state.todos = payload.todos;
+    },
+    setPriority(state, payload) {
+      state.todos[payload.index].priority = payload.priority;
+    },
+    editTodo(state, payload) {
+      state.todos[payload.index].text = payload.text;
     }
   },
   actions: {
@@ -30,6 +36,12 @@ const todosModule = {
     },
     toggleCompleted(context, payload) {
       context.commit('toggleCompleted', payload);
+    },
+    setPriority(context, payload) {
+      context.commit('setPriority', payload)
+    },
+    editTodo(context, payload) {
+      context.commit('editTodo', payload)
     }
   }
 }

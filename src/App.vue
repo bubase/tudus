@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
@@ -48,5 +48,9 @@ export default {
   .todos__container {
     border: 1px solid #eee;
     box-shadow: 0 2px 12px #eee;
+
+    @media (max-width: 500px) {
+      padding: 8px;
+    }
   }
 </style>
