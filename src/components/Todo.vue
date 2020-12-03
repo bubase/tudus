@@ -112,19 +112,21 @@ export default {
 
 <style lang="scss">
 
-  .todo__item .el-card__body {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px ;
-    border-radius: 4px;
-    min-height: 36px;
+  .todo__item {
+      .el-card__body {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px ;
+      border-radius: 4px;
+      min-height: 36px;
 
-    &:last-child {
-      border-bottom: none;
-    }
- 
-    @media (max-width: 500px) {
-      padding: 5px;
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      @media (max-width: 500px) {
+        padding: 5px;
+      }
     }
   }
 
